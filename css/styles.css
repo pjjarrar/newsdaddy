@@ -1,0 +1,207 @@
+/* Import vintage-style fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+Pro:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&display=swap');
+
+body {
+    font-family: 'Source Serif Pro', Georgia, serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #2c2c2c;
+}
+
+header {
+    background-color: #2c2c2c;
+    color: #f4f4f4;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-bottom: 3px double #888;
+}
+
+header h1 {
+    font-family: 'Abril Fatface', serif;
+    font-weight: 700;
+    font-size: 3.8rem;
+    margin: 0;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    line-height: 1.1;
+    color: #f4f4f4;
+    text-shadow: 
+        0 1px 1px rgba(0,0,0,0.1),
+        0 2px 3px rgba(0,0,0,0.2);
+}
+
+header h1::first-letter {
+    font-size: 130%;
+}
+
+header p {
+    font-style: italic;
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+.breaking-news {
+    background-color: #8b0000;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    animation: blink 2s infinite;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+header h1:hover {
+    text-shadow: 
+        0 1px 1px rgba(0,0,0,0.2),
+        0 2px 4px rgba(0,0,0,0.3);
+    transition: text-shadow 0.3s ease;
+}
+
+.article-image {
+    width: 70%;
+    height: auto;
+    margin: 1.5rem auto;
+    filter: grayscale(20%);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: block;
+}
+
+/* Add responsive sizing for smaller screens */
+@media (max-width: 768px) {
+    .article-image {
+        width: 100%;
+    }
+}
+
+.poll {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f8f8f8;
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #eee;
+}
+
+.poll h3, .poll h4 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.poll label {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.poll button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #2c2c2c;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.poll button:hover {
+    background-color: #444;
+}
+
+/* Poll Results Styling */
+.poll-results-container {
+    margin: 1.5rem 0;
+    text-align: left;
+}
+
+.poll-result-item {
+    margin-bottom: 1rem;
+}
+
+.poll-label {
+    margin-bottom: 0.3rem;
+    font-family: 'Source Serif Pro', serif;
+}
+
+.poll-bar-container {
+    background-color: #eee;
+    height: 25px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.poll-bar {
+    background-color: #8b0000;
+    height: 100%;
+    min-width: 20px;
+    transition: width 0.6s ease;
+    position: relative;
+}
+
+.poll-percentage {
+    position: absolute;
+    right: 8px;
+    color: white;
+    font-size: 0.9rem;
+    line-height: 25px;
+}
+
+.total-votes {
+    margin-top: 1rem;
+    font-style: italic;
+    color: #666;
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: #f4f4f4;
+    padding: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    border-top: 3px double #888;
+}
+
+.social-links {
+    margin-top: 1rem;
+}
+
+.social-link {
+    color: #f4f4f4;
+    text-decoration: none;
+    font-family: 'Source Serif Pro', serif;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.social-link:hover {
+    color: #ddd;
+}
+
+.social-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.5rem;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+    filter: grayscale(0%);
+}
